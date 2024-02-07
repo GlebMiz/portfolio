@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Header from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
-import SkillsComponentVue from './components/SkillsComponent.vue';
+import SkillsComponent from './components/SkillsComponent.vue';
 import { ref, onMounted } from 'vue';
 
 const translateY = ref(0);
@@ -19,19 +19,19 @@ const handleTouchStart = (event: TouchEvent) => {
 const handleTouchMove = (event: any) => {
   const excludedBlock = document.querySelector('.main__projects') as HTMLBodyElement;
   if (!excludedBlock.contains(event.target)) {
-    const deltaY = touchStartY.value - event.touches[0].clientY; 
+    const deltaY = touchStartY.value - event.touches[0].clientY;
     mainTranslate(deltaY);
     touchStartY.value = event.touches[0].clientY;
   }
 };
 
-const mainTranslate = (deltaY: number) =>{
+const mainTranslate = (deltaY: number) => {
   const currentPosition = translateY.value;
   if (deltaY > 0 && currentPosition > -50) {
-      translateY.value = currentPosition - 50;
-    } else if (deltaY < 0 && currentPosition < 0) {
-      translateY.value = currentPosition + 50;
-    }
+    translateY.value = currentPosition - 50;
+  } else if (deltaY < 0 && currentPosition < 0) {
+    translateY.value = currentPosition + 50;
+  }
 }
 
 onMounted(() => {
@@ -45,6 +45,6 @@ onMounted(() => {
   <Header />
   <main :style="{ transform: `translateY(${translateY}%)` }">
     <MainComponent />
-    <SkillsComponentVue />
+    <SkillsComponent />
   </main>
 </template>

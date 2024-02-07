@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+  import { faTelegram, faViber, faLinkedin, faUpwork } from '@fortawesome/free-brands-svg-icons'
 </script>
 
 <template>
@@ -15,10 +15,10 @@
         </div>
       </div>
       <div class="header__social-wrapper">
-        <a href="https://t.me/glebmiz"><font-awesome-icon :icon="['fab', 'telegram']" /></a>
-        <a href="viber://chat/?number=0937221016"><font-awesome-icon :icon="['fab', 'viber']" /></a>
-        <a href="https://www.linkedin.com/in/gleb-miz-830305291"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
-        <a href="https://www.upwork.com/freelancers/~013f8dfff64cb36be0"><font-awesome-icon :icon="['fab', 'upwork']" /></a>
+        <a href="viber://chat/?number=0937221016"><font-awesome-icon :icon="faViber" /></a>
+        <a href="https://t.me/glebmiz"><font-awesome-icon :icon="faTelegram" /></a>
+        <a href="https://www.linkedin.com/in/gleb-miz-830305291"><font-awesome-icon :icon="faLinkedin" /></a>
+        <a href="https://www.upwork.com/freelancers/~013f8dfff64cb36be0"><font-awesome-icon :icon="faUpwork" /></a>
       </div>
     </div>
   </header>
