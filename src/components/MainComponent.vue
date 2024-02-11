@@ -2,10 +2,10 @@
 import SwiperComponent from './SwiperComponent.vue';
 
 const projects = [
-  { src: '/img/arti.jpg' },
-  { src: '/img/blitzmods.jpg' },
-  { src: '/img/arti.jpg' },
-  { src: '/img/blitzmods.jpg' },
+  { src: 'img/arti.jpg' },
+  { src: 'img/blitzmods.jpg' },
+  { src: 'img/arti.jpg' },
+  { src: 'img/blitzmods.jpg' },
 ]
 </script>
 
