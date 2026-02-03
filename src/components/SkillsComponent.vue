@@ -1,10 +1,14 @@
+<script setup lang="ts">
+import { skills } from '@/data/skills';
+</script>
 <template>
   <div class="skills-page content-block">
     <div class="container skills__container">
       <div class="skills__header">
         <p>
           I have been developing websites for 3 years now and have experience with the various technologies needed to
-          develop a fully functioning website. It doesn’t matter if it’s a store, a forum or just a business card, it will
+          develop a fully functioning website. It doesn’t matter if it’s a store, a forum or just a business card, it
+          will
           fullfill its job 100%.
         </p>
       </div>
@@ -15,46 +19,10 @@
       <div class="skills__content">
         <h2 class="skills__content__header">My Skills</h2>
         <div class="skills__content__list">
-          <div class="skills__content__row">
-            <div class="skills__content__col">
-              <img src="/img/html_css.png" alt="JavaScript">
-              HTML + CSS
-            </div>
-            <div class="skills__content__col">
-              <img src="/img/js.png" alt="JavaScript">
-              JavaScript
-            </div>
-            <div class="skills__content__col">
-              <img src="/img/sass.png" alt="JavaScript">
-              SCSS
-            </div>
-          </div>
-          <div class="skills__content__row">
-            <div class="skills__content__col">
-              <img src="/img/vue.png" alt="JavaScript">
-              Vue.js
-            </div>
-            <div class="skills__content__col">
-              <img src="/img/bootsrap.png" alt="JavaScript">
-              Bootsrap
-            </div>
-            <div class="skills__content__col">
-              <img src="/img/jquery.png" alt="JavaScript">
-              JQuery
-            </div>
-          </div>
-          <div class="skills__content__row">
-            <div class="skills__content__col">
-              <img src="/img/php.png" alt="JavaScript">
-              PHP
-            </div>
-            <div class="skills__content__col">
-              <img src="/img/laravel.png" alt="JavaScript">
-              Laravel
-            </div>
-            <div class="skills__content__col">
-              <img src="/img/git.png" alt="JavaScript">
-              Git
+          <div v-for="(row, r_key) in skills" :key="r_key" class="skills__content__row">
+            <div v-for="(skill, s_key) in row" :key="s_key" class="skills__content__col">
+              <img :src="skill.src" alt="JavaScript">
+              {{ skill.text }}
             </div>
           </div>
         </div>
@@ -136,7 +104,7 @@
   align-items: end;
   margin-top: 20px;
   padding-bottom: 20px;
-  
+
   &:not(:last-child) {
     border-bottom: solid 3px rgba(255, 255, 255, 0.15);
   }

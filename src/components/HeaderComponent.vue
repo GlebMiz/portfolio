@@ -1,14 +1,11 @@
 <script setup lang="ts">
-  import { faTelegram, faViber, faLinkedin, faUpwork } from '@fortawesome/free-brands-svg-icons'
+import { faTelegram, faViber, faLinkedin, faUpwork } from '@fortawesome/free-brands-svg-icons'
 </script>
 
 <template>
   <header class="header">
     <div class="container header__container">
       <div class="header__logo-wrapper">
-        <div class="header__logo">
-          <img src="/img/logo.png" alt="Logo">
-        </div>
         <div class="header__info">
           <b>Gleb Mizghulin</b>
           <p>Full Stack Developer</p>
@@ -22,7 +19,7 @@
       </div>
     </div>
   </header>
-  
+
 </template>
 
 <style lang="scss">
@@ -33,8 +30,9 @@
   position: fixed;
   width: 100%;
   height: 120px;
-  padding: $spacing-md;
+  padding: $spacing-md $spacing-xxl;
   z-index: 999;
+  background: linear-gradient(90deg, rgba(27, 27, 27, 1) 0%, rgba(18, 46, 79, 1) 50%, rgb(14, 109, 70) 100%);
 }
 
 .header__container {
@@ -45,11 +43,11 @@
   height: 100%;
 
   @include breakpoint('xs') {
-   flex-direction: row;
+    flex-direction: row;
   }
 }
 
-.header__logo-wrapper{
+.header__logo-wrapper {
   display: flex;
   gap: $spacing-md;
   align-items: center;
@@ -70,7 +68,7 @@
   }
 }
 
-.header__info p{
+.header__info p {
   font-size: $size-xs;
 }
 
@@ -78,7 +76,7 @@
   display: flex;
   gap: $spacing-xxl;
   align-items: center;
-  
+
   @include breakpoint('xs') {
     margin-left: auto;
     justify-content: start;

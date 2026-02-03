@@ -1,12 +1,5 @@
 <script setup lang="ts">
 import SwiperComponent from './SwiperComponent.vue';
-
-const projects = [
-  { src: 'img/arti.jpg' },
-  { src: 'img/blitzmods.jpg' },
-  { src: 'img/arti.jpg' },
-  { src: 'img/blitzmods.jpg' },
-]
 </script>
 
 <template>
@@ -17,7 +10,7 @@ const projects = [
         <p>I develop various websites, from one-page landing pages to massive b2b platforms.</p>
       </div>
       <div class="main__projects">
-        <SwiperComponent :images="projects" />
+        <SwiperComponent />
       </div>
     </div>
     <div class="down-arrow"></div>
@@ -43,6 +36,7 @@ const projects = [
 
   @include breakpoint('md') {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
